@@ -1,24 +1,57 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a full stack application built using Ruby on Rails that allows users to ike and comment on blog posts and also displays the likes and comments.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow these simple example steps.
 
-* Database creation
+### Prerequisites
 
-* Database initialization
+- A code editor (preferably Visual Studio Code)
+<!-- ### Video description -->
 
-* How to run the test suite
+### Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby >= 3.1.2p20
 
-* Deployment instructions
+### Using it Locally
 
-* ...
+- Clone the project using the following command: 
+  ```
+  git clone https://github.com/Aquinasmoriasi/blog-app.git
+  ```
+
+
+- To Start the program:
+  cd into the repository in your shell
+  write `rails s` to start the rails server
+
+## Author
+
+👤 Aquinas Moriasi
+
+- GitHub: [Aquinas Moriasi](https://github.com/Aquinasmoriasi)
+- Twitter: [@Aquinas747](https://twitter.com/Aquinas747)
+- LinkedIn: [Aquinas Moriasi](https://twitter.com/aquinas-moriasi)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Aquinasmoriasi/blog-app/issues).
+
+## Show your support
+
+Give a [⭐️](https://github.com/Aquinasmoriasi/blog-app/stargazers) if you like this project!
+
+## Acknowledgments
+- Hat-tip to all whose code was used and to all those that made contributions one way or the other.
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
