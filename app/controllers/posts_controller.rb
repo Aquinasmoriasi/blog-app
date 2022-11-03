@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @user = User.find(author_id)
   end
 
   def show
-    # @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
+  end
+  private
+  def author_id
+    params.require(:user_id)
   end
 end
