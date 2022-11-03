@@ -21,13 +21,13 @@ RSpec.describe 'Users', type: :request do
     it "renders 'show' template" do
       expect(response).to render_template('users/show')
     end
-    it "shows if the specific user template is rendered correctly" do
+    it 'shows if the specific user template is rendered correctly' do
       expect(response.body).to include('<h2>User</h2>')
     end
   end
 end
 
-#   
+#
 #     it 'is a success' do
 #       expect(response).to have_http_status(:ok)
 #     end
