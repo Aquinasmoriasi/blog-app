@@ -1,1 +1,18 @@
-<h2>User's post</h2>
+<h2>Post #<%= @post.id %> by <%= @post.author.name %></h2>
+    <div>
+    <p>
+        <span class="posts-comment">Comments: <%= @post.commentscounter %></span>
+        <span class="posts-likes">Likes: <%= @post.likescounter %></span>
+    </p>
+    <p><%= @post.text%></p>
+    </div>
+    <div class="recent-comments">
+    <ul>
+    <% @post.comments.each do |com| %>
+     <li>
+        <p><%= com.author.name %>: <%= com.text %></p>
+     </li>
+    <% end %>
+</ul>
+
+
