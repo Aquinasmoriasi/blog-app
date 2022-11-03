@@ -1,1 +1,24 @@
-<h2>User</h2>
+<div class="post">
+    <img src= "<%= @user.photo %>" /> 
+        <%= link_to user_path(@user.id) do %>
+             <p><%= @user.name %></p>
+        <% end %>
+    <p>Number of Posts: <%= @user.postscounter %></p>
+</div>
+<div>
+    <p><%=@user.bio%></p>
+</div>
+<ul class="user-post">
+    <% @user.most_recent_posts.each do |post| %>
+        <li>
+         <p>Post #<%= post.id %></p> 
+         <p><%= post.text %></p>
+         <p>
+            Comments: <%= post.commentscounter %>, Likes: <%= post.likescounter %>
+         </p>
+        </li>
+    <% end %>
+</ul>
+<%= link_to user_posts_path(@user) do %>
+<button>See all posts</button>
+<% end %>
