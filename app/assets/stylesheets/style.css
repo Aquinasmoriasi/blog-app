@@ -23,8 +23,8 @@ li img,
   height: 100px;
 }
 
-.user-post li p:last-of-type,
-.specific-post p:last-of-type {
+.specific-post p:last-of-type,
+.user-post li p:last-of-type {
   align-self: flex-end;
 }
 
