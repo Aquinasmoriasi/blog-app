@@ -25,6 +25,7 @@ To get a local copy up and running follow these simple example steps.
   ```
   git clone https://github.com/Aquinasmoriasi/blog-app.git
   ```
+- Run `bundle install` to install the project's dependencies
 
 
 - To Start the program:
