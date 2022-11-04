@@ -3,7 +3,7 @@
         <%= link_to user_path(@user.id) do %>
              <p><%= @user.name %></p>
         <% end %>
-    <p>Number of Posts: <%= @user.postscounter %></p>
+    <p>Number of Posts: <%= (@user.posts.count) %></p>
 </div>
 <div>
     <p><%=@user.bio%></p>
