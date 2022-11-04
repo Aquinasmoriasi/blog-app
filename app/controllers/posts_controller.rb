@@ -14,11 +14,10 @@ class PostsController < ApplicationController
   def create
     post = Post.create(title: post_params[:title], text: post_params[:text], author: current_user)
     if post.save
-      notice = 'Post was successfully created.'
+      redirect_to "/users/#{post.author_id}"
     else
-      notice = 'Error in base'
+      redirect_to new_user_post_path
     end
-    redirect_to "/users/#{post.author_id}"
   end
 
   private
