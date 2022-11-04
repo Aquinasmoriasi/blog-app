@@ -32,7 +32,7 @@ RSpec.describe Post, type: :model do
 
   context '#five_most_recent_posts' do
     it 'should return at most 5 items' do
-      expect(subject.five_most_recent_posts.length).to be_between(0, 5)
+      expect(subject.most_recent_comments.length).to be_between(0, 5)
     end
   end
 end

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  padding: 20px 50px;
+}
+
+li,
+.post {
+  display: flex;
+  gap: 20px;
+}
+
+li img,
+.post img {
+  width: 100px;
+  height: 100px;
+}
+
+.specific-post p:last-of-type,
+.user-post li p:last-of-type {
+  align-self: flex-end;
+}
+
+.user-post li,
+.specific-post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
