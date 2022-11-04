@@ -3,7 +3,7 @@
 > This is a full stack application built using Ruby on Rails that allows users to ike and comment on blog posts and also displays the likes and comments.
 
 ## Built With
-
+ 
 - Ruby on Rails
 
 ## Getting Started
