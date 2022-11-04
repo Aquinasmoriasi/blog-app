@@ -17,9 +17,11 @@
 <%= link_to new_user_post_comment_path do %>
 <button>add comment</button>
 <% end %>
+
+<%= bootstrap_form_with url: user_post_likes_url, scope: :like do |f| %>
+    <%= f.submit "Like" %>
+<% end %>
+
 <%= link_to root_path do %>
 <button>back to all users</button>
 <% end %>
-
-
-
