@@ -1,4 +1,4 @@
-<%= bootstrap_form_with model: @post do |f| %>
+<%= bootstrap_form_with model: @post, url: user_posts_url do |f| %>
   <%= f.text_field :title %>
   <%= f.text_area :text %>
   <%= f.submit %>

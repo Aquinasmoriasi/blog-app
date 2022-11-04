@@ -7,11 +7,27 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  
+  def new
+    @post = Post.new
+  end
+
+  def create
+    post = Post.create(title: post_params[:title], text: post_params[:text], author: current_user)
+    if post.save
+      notice = 'Post was successfully created.'
+    else
+      notice = 'Error in base'
+    end
+    redirect_to "/users/#{post.author_id}"
+  end
 
   private
 
   def author_id
     params.require(:user_id)
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

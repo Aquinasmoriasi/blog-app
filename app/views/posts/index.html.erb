@@ -1,6 +1,6 @@
 <% @user.posts.each do |post| %>
   <%= link_to user_post_path(@user, post) do %>
-  <h2>Post: <%= post.id %></h2>
+  <h2>Post: <%= (@user.posts.find_index(post) + 1) %></h2>
   <% end %>
   <div>
     <p><%= post.text %></p>
@@ -18,6 +18,10 @@
     </ul>
     <div>
   </div>
+<% end %>
+
+<%= link_to new_user_post_path do  %>
+  <button>Add post</button>
 <% end %>
 
 
