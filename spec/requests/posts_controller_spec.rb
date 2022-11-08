@@ -20,7 +20,7 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'shows if the specific user template is rendered correctly' do
       get '/users/1/posts/1'
-      expect(response.body).to include("back to all users")
+      expect(response.body).to include('back to all users')
     end
   end
 end
