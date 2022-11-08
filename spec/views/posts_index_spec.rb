@@ -4,7 +4,7 @@ RSpec.describe 'posts/index', type: :system do
   user = User.create!(
     name: 'Tom Okeye',
     photo: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
-    bio: 'I am a software developer',
+    bio: 'I am a software developer'
   )
   post1 = Post.create!(title: 'Title1', text: 'MyText1', author: user)
   post2 = Post.create!(title: 'Title2', text: 'MyText2', author: user)

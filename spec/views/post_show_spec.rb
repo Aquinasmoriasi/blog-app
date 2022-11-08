@@ -4,10 +4,10 @@ RSpec.describe 'posts/show', type: :system do
   user = User.create!(
     name: 'Tom Okeye',
     photo: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
-    bio: 'I am a software developer',
+    bio: 'I am a software developer'
   )
   post = Post.create!(title: 'Title1', text: 'MyText1', author: user)
-  comment = Comment.create!(post: post, author: user, text: 'This is a good post')
+  comment = Comment.create!(post:, author: user, text: 'This is a good post')
 
   it 'render the show template' do
     visit user_post_path(user, post)

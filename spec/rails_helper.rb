@@ -67,7 +67,7 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
   end
-  
+
   config.before(:each, js: true) do
     DatabaseCleaner.strategy = :truncation
   end
@@ -75,7 +75,7 @@ RSpec.configure do |config|
   # This block must be here, do not combine with the other `before(:each)` block.
   # This makes it so Capybara can see the database.
   config.before(:each) do
-   DatabaseCleaner.start
+    DatabaseCleaner.start
   end
 
   config.after(:each) do
