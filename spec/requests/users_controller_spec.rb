@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
     end
   end
   describe 'get #show' do
-    before(:example) { get '/users/:id' }
+    before(:example) { get '/users/1' }
     it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
@@ -22,19 +22,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('users/show')
     end
     it 'shows if the specific user template is rendered correctly' do
-      expect(response.body).to include('<h2>User</h2>')
+      expect(response.body).to include('See all posts')
     end
   end
 end
-
-#
-#     it 'is a success' do
-#       expect(response).to have_http_status(:ok)
-#     end
-#     it "renders 'show' template" do
-#       expect(response).to render_template('users/show')
-#     end
-#     it 'shows if the specific user template is rendered correctly' do
-#       get '/users/:id'
-#       expect(response.body).to include('<p>Here is a list of posts for a given user</p>')
-#     end
