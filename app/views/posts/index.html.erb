@@ -1,4 +1,11 @@
-<% @user.posts.each do |post| %>
+<div class="post">
+    <img src= "<%= @user.photo %>" /> 
+        <%= link_to user_path(@user.id) do %>
+             <%= @user.name %>
+        <% end %>
+    <p>Number of Posts: <%= (@user.posts.count) %></p>
+</div>
+<% @posts.each do |post| %>
   <%= link_to user_post_path(@user, post) do %>
   <h2>Post: <%= post.id %></h2>
   <% end %>

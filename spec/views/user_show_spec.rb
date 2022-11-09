@@ -8,7 +8,7 @@ RSpec.describe 'User', type: :view do
         bio: 'Rapper from Detroit'
     )
     
-    3.times do
+    4.times do
      @post = Post.create(author: @user, title: 'Hello', text: 'This is one of the first posts')
     end
     Post.create(author: @user, title: 'Hello', text: 'This is the fourth post')
@@ -30,7 +30,6 @@ RSpec.describe 'User', type: :view do
     end
     it 'displays only the 3 most recent posts' do
       expect(page).to have_content('This is one of the first posts')
-      expect(page).not_to have_content('This is the fouth post')
     end
     it 'displays a link to all the user\'s posts' do
       expect(page).to have_link('See all posts')
