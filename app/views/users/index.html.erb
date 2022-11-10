@@ -1,9 +1,12 @@
+<%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link border-0 bg-light m-3' %>
 <ul>
     <% @users.each do |user| %>
      <li>
-        <img src= "<%= user.photo %>" /> 
+        <div class="photo">
+          <img src= "<%= user.photo %>" /> 
+        </div>
           <%= link_to user_path(user.id) do %>
-            <p><%= user.name %></p>
+            <p class="text-decoration-none"><%= user.name %></p>
           <% end %>
         <p>Number of Posts: <%= user.postscounter %></p>
      </li>
